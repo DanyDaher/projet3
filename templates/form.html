@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Centre d'adoption pour animaux</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <h1>Centre d'adoption pour animaux</h1>
+
+  <form id="ajout-form" method="post" action="index.py" novalidate>
+
+    <div class="field">
+      <label for="nom">Nom de l'animal :</label>
+      <input type="text" id="nom" name="nom" required>
+      <span class="error" data-for="nom"></span>
+    </div>
+
+    <div class="field">
+      <label for="espece">Espèce de l'animal :</label>
+      <input type="text" id="espece" name="espece" required>
+      <span class="error" data-for="espece"></span>
+    </div>
+
+    <div class="field">
+      <label for="race">Race de l'animal :</label>
+      <input type="text" id="race" name="race" required>
+      <span class="error" data-for="race"></span>
+    </div>
+
+    <div class="field">
+      <label for="age">Donnez son âge (0 à 30) :</label>
+      <input type="number" id="age" name="age" min="0" max="30" required>
+      <span class="error" data-for="age"></span>
+    </div>
+
+    <div class="field">
+      <label for="description">Information sur l'animal :</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+      <span class="error" data-for="description"></span>
+    </div>
+
+    <div class="field">
+      <label for="courriel">Adresse courriel du propriétaire :</label>
+      <input type="email" id="courriel" name="courriel" required>
+      <span class="error" data-for="courriel"></span>
+    </div>
+
+    <div class="field">
+      <label for="adresse">Adresse civique :</label>
+      <input type="text" id="adresse" name="adresse" required>
+      <span class="error" data-for="adresse"></span>
+    </div>
+
+    <div class="field">
+      <label for="ville">Ville :</label>
+      <input type="text" id="ville" name="ville" required>
+      <span class="error" data-for="ville"></span>
+    </div>
+
+    <div class="field">
+      <label for="cp">Code postal (exemple: H1A 2B3) :</label>
+      <input type="text" id="cp" name="cp" placeholder="A1A 1A1" required>
+      <span class="error" data-for="cp"></span>
+    </div>
+
+    <button type="submit">Soumission</button>
+    <p id="form-status"></p>
+  </form>
+
+  <script src="/static/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+div ,p {
+    color: black;
+}
+
+body {
+  background-image: url("../img/animaux.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
