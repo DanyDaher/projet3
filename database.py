@@ -15,7 +15,6 @@
 
 import sqlite3
 
-
 def _build_animal(result_set_item):
     animal = {}
     animal["id"] = result_set_item[0]

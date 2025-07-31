@@ -15,6 +15,8 @@
 from flask import Flask, request
 from flask import render_template
 from flask import g
+from flask import redirect
+from flask import url_for
 from .database import Database
 
 app = Flask(__name__, static_url_path="", static_folder="static")
@@ -42,9 +44,22 @@ def form():
 @app.route("/ajouter", methods=["GET", "POST"])
 def ajouter():
     if request.method == "POST":
+        print("before-insert")
         # récupérer les données du formulaire
+        nom = request.form.get("nom")
+        espece = request.form.get("espece")
+        race = request.form.get("race")
+        age = request.form.get("age")
+        description = request.form.get("description")
+        courriel = request.form.get("courriel")
+        adresse = request.form.get("adresse")
+        ville = request.form.get("ville")
+        cp = request.form.get("cp")
+        print("pre-insert")
         # insérer dans la base
+        db = get_db()
+        last_id = db.add_animal(nom, espece, race, age, description, courriel, adresse, ville, cp)
+        print("reussi")
         # rediriger
-        ...
+        return redirect(url_for('form'))
     return render_template("form.html")
-

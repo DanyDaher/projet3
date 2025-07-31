@@ -1,7 +1,5 @@
 div ,p {
   color: black;
-  max-width: 400px;
-  width: 100%;
 }
 
 body {
@@ -13,4 +11,10 @@ body {
   color: teal;
   margin: 0;
   padding: 0;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  font-weight: bold;
 }

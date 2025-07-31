@@ -10,7 +10,7 @@
 
   <h1>Centre d'adoption pour animaux</h1>
 
-  <form id="ajout-form" method="post" action="index.py" novalidate>
+  <form id="ajout-form" method="POST" action="{{ url_for('ajouter') }}" novalidate>
 
     <div class="field">
       <label for="nom">Nom de l'animal :</label>
@@ -70,7 +70,7 @@
     <p id="form-status"></p>
   </form>
 
-  <script src="/static/js/script.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 </html>
