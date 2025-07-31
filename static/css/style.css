@@ -1,12 +1,16 @@
 div ,p {
-    color: black;
+  color: black;
+  max-width: 400px;
+  width: 100%;
 }
 
 body {
-  background-image: url("../img/animaux.jpg");
+  background-image: url('/img/animaux.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: Arial, sans-serif;
+  background-position-y: top;
+  color: teal;
+  margin: 0;
+  padding: 0;
 }
-
